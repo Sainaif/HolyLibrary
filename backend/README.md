@@ -9,7 +9,44 @@ No external dependencies need manual installation. Go modules will handle depend
 ```bash
 go mod tidy
 ```
+## Setting Up the Database
 
+### 1. Install PostgreSQL
+If PostgreSQL is not installed, download it from [https://www.postgresql.org/download/](https://www.postgresql.org/download/) and install it.
+
+### 2. Access the PostgreSQL Shell
+Log in to the PostgreSQL shell:
+```bash
+psql -U postgres
+```
+
+### 3. Create the Database
+Run the following commands to set up the database:
+```sql
+-- Create a new database
+CREATE DATABASE holylibrary;
+
+-- Create a user with a password
+CREATE USER <holylibrary_user> WITH PASSWORD '<password>';
+
+-- Grant all privileges on the database to the user
+GRANT ALL PRIVILEGES ON DATABASE holylibrary TO <holylibrary_user>;
+```
+
+### 4. Verify the Setup
+Exit the PostgreSQL shell:
+```bash
+\q
+```
+
+Test the connection to the database using the `.env` file values:
+```bash
+psql -U <holylibrary_user> -d holylibrary
+```
+
+If successful, the database is ready.
+
+---
 ### Configure Environment Variables
 Create a `.env` file in the `backend` directory with the following content:
 ```env
