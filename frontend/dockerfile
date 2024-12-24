@@ -1,7 +1,7 @@
 # Use node image for Vue 3
 FROM node:20-alpine
 
-WORKDIR /app
+WORKDIR /holylibrary
 
 # Install dependencies
 COPY package*.json ./
