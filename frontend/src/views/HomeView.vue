@@ -41,4 +41,30 @@
     },
   };
   </script>
+  <template>
+    <div>
+      <h1>Uploaded Files</h1>
+      <ul>
+        <li v-for="file in files" :key="file.id">
+          {{ file.filename }}
+        </li>
+      </ul>
+    </div>
+  </template>
+  
+  <script>
+  import axios from "axios";
+  
+  export default {
+    data() {
+      return {
+        files: [],
+      };
+    },
+    async created() {
+      const response = await axios.get("http://localhost:8080/files");
+      this.files = response.data;
+    },
+  };
+  </script>
   
