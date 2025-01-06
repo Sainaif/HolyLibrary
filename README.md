@@ -70,6 +70,19 @@ HolyLibrary aims to serve as a lightweight, self-hosted solution for individuals
    - Visualize library usage patterns through detailed stats.
    - Identify trends like the most-read files, active users, or reading preferences.
 
+6. **Advanced Search**
+   - Powered by **Elasticsearch** for lightning-fast, full-text indexing and querying.
+   - Complex filters and advanced search options for quick content retrieval.
+
+7. **Role-Based Access Control**
+   - Supports user roles like **admin**, **moderator**, **user**, **non-registered user**, **banned**, and **warned**.
+   - Allows fine-grained permissions and rules for file modifications, uploads, and deletions.
+   - Built-in tools for moderating users, comments, reports, and warnings.
+
+8. **Backup and Distributed Storage**
+   - Supports exporting/importing databases and backing up to **cloud or network storage**.
+   - Option to distribute databases across multiple servers for scalable storage.
+
 ---
 
 ## Guiding Principles
@@ -95,3 +108,4 @@ HolyLibrary is distributed under the **MIT License**, which provides users with 
 ---
 
 HolyLibrary is not a revolution; it’s an evolution—crafted with care, designed to grow, and built to serve. We hope it will find its place in your digital library and make managing your collections a little easier and a lot faster.
+
